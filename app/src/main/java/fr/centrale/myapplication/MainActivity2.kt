@@ -38,11 +38,17 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(intent);
         }
 
+        button17.setOnClickListener {
+            val monIntent = Intent(this, ButtonActivity::class.java)
+            startActivity(monIntent)
+        }
+
+
         button8.setOnClickListener{
             this.dispatchTakePictureIntent()
         }
 
-        button10.setOnClickListener{
+        button10.setOnClickListener {
             imageView2.setImageBitmap(null)
         }
 

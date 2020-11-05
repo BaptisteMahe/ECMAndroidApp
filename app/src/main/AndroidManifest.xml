@@ -13,10 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_zxp_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ButtonActivity"></activity>
         <activity android:name=".ShareActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
                 <data android:mimeType="test/plain" />
             </intent-filter>
