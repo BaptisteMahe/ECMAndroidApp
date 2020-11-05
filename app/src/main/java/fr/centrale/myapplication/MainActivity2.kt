@@ -33,8 +33,8 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         button5.setOnClickListener {
-            val i = Intent(Intent.ACTION_VIEW, Uri.parse("http://persil.ovh1.ec-m.fr/my-site/"))
-            startActivity(i);
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://persil.ovh1.ec-m.fr/my-site/"))
+            startActivity(intent);
         }
 
         button8.setOnClickListener{
