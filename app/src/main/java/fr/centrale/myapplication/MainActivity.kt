@@ -51,6 +51,11 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(monIntent, forResultActivity_3)
         }
 
+        button14.setOnClickListener{
+            val monIntent = Intent(this, ShareActivity::class.java)
+            startActivity(monIntent)
+        }
+
         button11.setOnClickListener{
             Intent().also { intent ->
                 intent.setAction("fr.centrale.myapplication.MY_NOTIFICATION")
