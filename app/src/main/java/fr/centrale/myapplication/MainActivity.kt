@@ -3,7 +3,6 @@ package fr.centrale.myapplication
 import android.app.Activity
 import android.app.NotificationChannel
 import android.app.NotificationManager
-import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
@@ -16,7 +15,6 @@ import android.support.v4.app.NotificationManagerCompat
 import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.random.Random
 
 private const val TAG = "MainActivity"
 
