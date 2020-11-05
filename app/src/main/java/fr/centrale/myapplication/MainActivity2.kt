@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_main2.*
 class MainActivity2 : AppCompatActivity() {
 
     val REQUEST_IMAGE_CAPTURE = 1
+    val URL = "http://persil.ovh1.ec-m.fr/my-site/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +34,21 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         button5.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://persil.ovh1.ec-m.fr/my-site/"))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(URL))
             startActivity(intent);
+        }
+
+        button13.setOnClickListener{
+            val sendIntent = Intent().apply{
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, "Salut")
+            if (sendIntent.resolveActivity(packageManager) != null) {
+                startActivity(shareIntent)
+            }
         }
 
         button8.setOnClickListener{
