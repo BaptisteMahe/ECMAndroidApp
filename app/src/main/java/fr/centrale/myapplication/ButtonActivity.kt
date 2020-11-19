@@ -30,7 +30,7 @@ class ButtonActivity : AppCompatActivity(), View.OnClickListener {
             val container: ViewGroup = findViewById(R.id.custom_toast_container)
             val layout = inflater.inflate(R.layout.custom_toat, container, false)
             val text: TextView = layout.findViewById(R.id.text)
-            text.text = "Je suis encore mieux toaté"
+            text.text = "Je suis encore mieux toasté"
             with(Toast(applicationContext)) {
                 this.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
                 duration = Toast.LENGTH_LONG
